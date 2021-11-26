@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&display=swap");
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background: #222;
+}
+
+body header {
+  height: 100vh;
+  background-color: #3de07e;
+  background-image: url("../assets/ninjahead.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header img {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+body header h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+body main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+body main article {
+  grid-column: auto / span 2;
+  color: #fff;
+}
+
+body main article.large {
+  grid-column: auto / span 3;
+  background: #fff;
+  color: #222;
+}
+
+body main article.large h2, body main article.large p {
+  margin: 0 1rem;
+}
+
+body main article.large button {
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+
+body main article img {
+  width: 100%;
+}
+
+body main article h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+body main article p {
+  font-weight: 300;
+  line-height: 140%;
+}
+
+body main article button {
+  appearance: none;
+  padding: .5rem 1rem;
+  border: none;
+  background: #E83F57;
+  color: #fff;
+  border-radius: .125rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+body footer {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body footer section {
+  max-width: 1000px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+body footer section article {
+  color: white;
+  height: 16rem;
+}
+
+body footer section article h2 {
+  margin-bottom: 1rem;
+}
+
+body footer section article p {
+  font-weight: 300;
+  line-height: 150%;
+}
+
+body footer section article figure {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  
+  body main article {
+    grid-column: auto / span 3;
+  }
+
+  body main article.large {
+    grid-column: auto / span 6;
+  }
+
+  body footer section {
+    grid-template-columns: 1fr;
+  }
+
+  body footer section article {
+    height: auto;
+    padding: 1rem 2rem;
+  }
+
+}
